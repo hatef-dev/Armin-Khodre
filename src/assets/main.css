@@ -4,7 +4,32 @@
 /* 1. Verify the image path is correct - './image.png' must exist relative to this CSS file */
 /* 2. Use a properly sized image (most browsers recommend max 32x32px for cursors) */
 /* 3. Add cursor fallback to ensure it always works */
-body{
+@font-face {
+  font-family: "Yekan Bakh FaNum";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("./YekanBakhFaNum-VF.woff2") format("woff2"),
+       url("./YekanBakhFaNum-VF.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Yekan Bakh NoEn";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("./YekanBakhNoEnVF.woff2") format("woff2"),
+       url("./YekanBakhNoEnVF.woff") format("woff");
+}
+
+@theme {
+  --font-sans: "Yekan Bakh FaNum", system-ui, sans-serif;
+}
+
+body {
+  font-feature-settings: "ss01";
+  -webkit-font-feature-settings: "ss01";
+  -moz-font-feature-settings: "ss01";
   cursor: url('./cursor.png'), auto;
 }
 .my-container {

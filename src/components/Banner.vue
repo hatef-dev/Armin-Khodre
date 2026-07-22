@@ -1,5 +1,8 @@
 <template>
-  <section ref="pinSection" class="hero-image-swap h-[820px] group">
+  <section
+    ref="pinSection"
+    class="hero-image-swap group h-[420px] sm:h-[560px] md:h-[650px] lg:h-[720px]"
+  >
     <div ref="imageFrame" class="relative w-full h-full overflow-hidden">
       <div class="absolute z-10 w-full">
         <slot></slot>
@@ -13,10 +16,10 @@
         class="frame-img w-full"
       />
       <div
-        class="bg-black/20 w-full h-full absolute top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 left-0 flex justify-center items-center"
+        class="bg-black/20 w-full h-full absolute top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 left-0 hidden md:flex justify-center items-center"
       >
-        <span class="scroll-icon">
-          <span class="scroll-icon__wheel-outer">
+        <span class="scroll-icon flex justify-center items-center">
+          <span class="scroll-icon__wheel">
             <span class="scroll-icon__wheel-inner"></span>
           </span>
         </span>
@@ -147,19 +150,16 @@ export default {
 .example--1 {
   background: tomato;
 }
-
-.scroll-icon__wheel-outer {
+.scroll-icon__wheel {
   display: block;
   position: relative;
-  left: 50%;
   top: 0.6em;
+  left: -13px;
   height: 1em;
   width: 0.4em;
-  margin-left: -0.2em;
   border-radius: 0.4em;
   overflow: hidden;
 }
-
 .scroll-icon__wheel-inner {
   display: block;
   height: 100%;
@@ -175,5 +175,12 @@ export default {
   width: 2.5em;
   border: 0.25em solid #fff;
   border-radius: 1em;
+}
+@media (max-width: 1023px) {
+  .scroll-icon {
+    height: 2.6em;
+    width: 1.9em;
+    border-width: 0.2em;
+  }
 }
 </style>
