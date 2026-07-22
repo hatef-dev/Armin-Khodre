@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <router-view dir="rtl" v-persian-digits :key="$route.path" />
+    <router-view class="bg-[#F1F5F9]" dir="rtl" v-persian-digits :key="$route.path" />
   </div>
 </template>
 <script>
