@@ -8,3 +8,9 @@ export default {
   name: "App",
 }
 </script>
+<style>
+body{
+  cursor: url('@/assets/image.png');
+}
+
+</style>

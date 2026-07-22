@@ -1,6 +1,12 @@
 @import "tailwindcss";
 
-
+/* Common fixes for custom cursor not working: */
+/* 1. Verify the image path is correct - './image.png' must exist relative to this CSS file */
+/* 2. Use a properly sized image (most browsers recommend max 32x32px for cursors) */
+/* 3. Add cursor fallback to ensure it always works */
+body{
+  cursor: url('./cursor.png'), auto;
+}
 .my-container {
   margin-left: auto;
   margin-right: auto;
