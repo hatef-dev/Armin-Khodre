@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <router-view :key="$route.path" />
+    <router-view dir="rtl" v-persian-digits :key="$route.path" />
   </div>
 </template>
 <script>
@@ -9,8 +9,6 @@ export default {
 }
 </script>
 <style>
-body{
-  cursor: url('@/assets/image.png');
-}
+
 
 </style>

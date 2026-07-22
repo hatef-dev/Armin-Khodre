@@ -1,6 +1,9 @@
 <template>
   <section ref="pinSection" class="hero-image-swap h-[820px] group">
     <div ref="imageFrame" class="relative w-full h-full overflow-hidden">
+      <div class="absolute z-10 w-full">
+        <slot></slot>
+      </div>
       <img
         v-for="(img, i) in images"
         :key="img.src"
