@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-transparent border-b border-white w-full py-5 ">
+  <div dir="rtl" class="bg-transparent border-b border-white w-full py-5 ">
     <div class="my-container">
         <ul class="flex justify-between items-center  text-white">
             <li>
